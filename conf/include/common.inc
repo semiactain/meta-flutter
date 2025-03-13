@@ -479,7 +479,8 @@ def build_app(d, source_dir, flutter_sdk, pubspec_appname, flutter_application_p
 
             if not new_build_scheme:
                 dart_runtime = f'{flutter_sdk}/bin/cache/dart-sdk/bin/dart'
-                frontend_snapshot = f'{flutter_sdk}/bin/cache/artifacts/engine/linux-{clang_build_arch(d)}/frontend_server.dart.snapshot'
+#                frontend_snapshot = f'{flutter_sdk}/bin/cache/artifacts/engine/linux-{clang_build_arch(d)}/frontend_server.dart.snapshot'
+                frontend_snapshot = f'{flutter_sdk}/bin/cache/dart-sdk/bin/snapshots/frontend_server.dart.snapshot'
                 dep_path = glob.glob(f'{source_dir}/{flutter_application_path}/.dart_tool/flutter_build/*/kernel_snapshot.d')
             else:
                 dart_runtime = f'{flutter_sdk}/bin/cache/dart-sdk/bin/dartaotruntime'
